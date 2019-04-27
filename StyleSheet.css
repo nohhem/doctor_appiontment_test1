@@ -1,0 +1,22 @@
+﻿body {
+}
+.tblGeneral
+{
+    width:100%;
+    height:500px;
+    }
+    .menu
+    {
+        width:20%;
+        height:500px;
+        vertical-align:top;
+        text-align:left;
+        background-color:yellow;
+        }
+        .content
+        {
+            width:80%;
+            height:500px;
+            vertical-align:top;
+            text-align:left;
+        }

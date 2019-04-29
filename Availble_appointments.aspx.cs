@@ -69,18 +69,21 @@ public partial class Default2 : System.Web.UI.Page
     protected void DayPilotCalendar1_OnBeforeEventRender(object sender, BeforeEventRenderEventArgs e)
     {
         string status = e.Tag["AppointmentStatus"];
+        
+
         switch (status)
         {
             case "free":
                 e.DurationBarColor = "green";
-                break;
-            case "waiting":
-                e.DurationBarColor = "orange";
+                e.Html = "Available";
+                e.ToolTip = "Click to Request This Time Slot";
                 break;
             case "confirmed":
-                e.DurationBarColor = "#f41616";  // red            
+                e.DurationBarColor = "#f41616";
+                e.Html = "the appointment, confirmed";
                 break;
         }
+
     }
 
     protected void DayPilotCalendar1_OnEventMove(object sender, EventMoveEventArgs e)

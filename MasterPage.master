@@ -13,7 +13,7 @@
     <table class="tblGeneral">
         <tr>
             <td class="menu">
-                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Default.aspx">Doctor Login</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Doctor_login.aspx">Doctor Login</asp:HyperLink>
                 <br />
                 <br />
                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/chooseDoctor.aspx">Check Appointments</asp:HyperLink>

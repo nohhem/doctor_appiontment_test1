@@ -8,7 +8,7 @@
                     <td>
                         Username</td>
                     <td>
-                        <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtUsername" runat="server" ></asp:TextBox>
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="rfvUsername" runat="server" 

@@ -14,6 +14,26 @@ public partial class SendMessage : System.Web.UI.Page
     protected void btnAdd_Click(object sender, EventArgs e)
     {
 
+
+        String user = ddlUsers.Text;
+        Response.Write("there is no such a Doctor "+user);
+
+        OleDbConnection con = ConnectDB.getConStr();
+        OleDbCommand cmd = new OleDbCommand("select username from tbl_Users where username=@un", con);
+        cmd.Parameters.AddWithValue("@un", ddlUsers.Text);
+       // cmd.Parameters.AddWithValue("@up", txtPassword.Text);
+        con.Open();
+        object usr = cmd.ExecuteScalar();
+        if (usr != null)
+        {
+            Response.Write("Login succeded");
+            Session["Doctortoview"] = ddlUsers.Text;
+            Response.Redirect("Availble_appointments.aspx");
+        }
+        else
+        {
+            Response.Write("there is no such a Doctor");
+        }
     }
     protected void btnSend_Click(object sender, EventArgs e)
     {
@@ -34,8 +54,10 @@ public partial class SendMessage : System.Web.UI.Page
 
     }
 
+
+
     protected void ddlUsers_SelectedIndexChanged(object sender, EventArgs e)
     {
-
+        
     }
 }

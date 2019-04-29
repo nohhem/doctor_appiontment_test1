@@ -16,7 +16,7 @@
                 <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Default.aspx">Doctor Login</asp:HyperLink>
                 <br />
                 <br />
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/SendMessage.aspx">check appointments</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/chooseDoctor.aspx">Check Appointments</asp:HyperLink>
                 <br />
                 <br />
                 <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ReadMessage.aspx">Read Message</asp:HyperLink>

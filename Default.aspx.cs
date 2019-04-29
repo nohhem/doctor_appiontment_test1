@@ -24,7 +24,7 @@ public partial class _Default : System.Web.UI.Page
         {
             Response.Write("Login succeded");
             Session["user"] = txtUsername.Text;
-            Response.Redirect("SendMessage.aspx");
+            Response.Redirect("DoctorDashboard.aspx");
         }
         else 
         {

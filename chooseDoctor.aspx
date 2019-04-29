@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SendMessage.aspx.cs" Inherits="SendMessage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="chooseDoctor.aspx.cs" Inherits="SendMessage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -16,7 +16,7 @@
     <table class="style1">
         <tr>
             <td>
-                Chose Doctor
+                Choose Doctor
             </td>
             <td>
                 <asp:DropDownList ID="ddlUsers" runat="server" DataSourceID="adsUsers" 

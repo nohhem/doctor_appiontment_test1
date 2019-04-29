@@ -54,4 +54,19 @@ public class ConnectDB
         conn.Close();
         return id;
     }
+
+    public static void confirm_UpdateAppointment(int id, string name, string status)
+    {
+        using (OleDbConnection con = ConnectDB.getConStr() )
+        {
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand("UPDATE [Appointment] SET [AppointmentPatientName] = @name, [AppointmentStatus] = @status WHERE [AppointmentId] = @id", con);
+
+            cmd.Parameters.AddWithValue("name", name);
+            cmd.Parameters.AddWithValue("status", status);
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.ExecuteNonQuery();
+        }
+
+    }
 }

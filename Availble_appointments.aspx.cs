@@ -11,6 +11,7 @@ using DayPilot.Web.Ui.Events.Calendar;
 using BeforeCellRenderEventArgs = DayPilot.Web.Ui.Events.Navigator.BeforeCellRenderEventArgs;
 using CommandEventArgs = DayPilot.Web.Ui.Events.CommandEventArgs;
 
+
 public partial class Default2 : System.Web.UI.Page
 {
     private DataTable _appointments;
@@ -64,6 +65,9 @@ public partial class Default2 : System.Web.UI.Page
         LoadAppointments();
         LoadCalendarData();
         */
+        int doctor_id = ConnectDB.LoadUserId(Session["Doctortoview"].ToString());
+        confirm_UpdateAppointment(doctor_id,);
+
     }
 
     protected void DayPilotCalendar1_OnBeforeEventRender(object sender, BeforeEventRenderEventArgs e)

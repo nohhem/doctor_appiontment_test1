@@ -26,7 +26,7 @@ public partial class SendMessage : System.Web.UI.Page
         object usr = cmd.ExecuteScalar();
         if (usr != null)
         {
-            Response.Write("Login succeded");
+            Response.Write(" succeded");
             Session["Doctortoview"] = ddlUsers.Text;
             Response.Redirect("Availble_appointments.aspx");
         }
